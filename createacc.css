@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper for center alignment */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Main container for the form */
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px; /* Increased width for a wider form */
+    height: auto;
+    max-height: 600px; /* Set a max height for the container */
+    overflow-y: auto; /* Allow vertical scroll if the content exceeds the max height */
+}
+
+
+.signup-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.signup-text p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.signup-text .btn {
+    background-color: #fff;
+    color: #6c63ff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.signup-text .btn:hover {
+    background-color: #5a52e0;
+    color: #fff;
+}
+
+/* Right section with the form */
+.col-right {
+    padding: 20px;
+    flex: 1;
+}
+
+.signup-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.signup-form p {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.signup-form label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.signup-form input,
+.signup-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.signup-form input[type="file"] {
+    padding: 6px;
+}
+
+.signup-form button {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #5a52e0;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-height: none; /* Remove max height on smaller screens */
+    }
+
+    .col-left, .col-right {
+        width: 100%;
+        padding: 20px;
+    }
+}
